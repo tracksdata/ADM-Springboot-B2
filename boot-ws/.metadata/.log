@@ -4662,3 +4662,15 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.eclipse.wst.html.ui 1 1 2020-07-13 18:10:14.181
 !MESSAGE No line style provider for org.eclipse.wst.html.SCRIPT.EVENTHANDLER
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-14 07:40:21.529
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.hwrWguVE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-14 07:40:21.530
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.hwrWguVE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-14 07:40:21.530
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-07-14 07:40:21.530
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.hwrWguVE => OK
