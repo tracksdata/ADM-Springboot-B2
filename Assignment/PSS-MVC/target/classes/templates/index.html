@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>www.flybrownfield.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<link href="/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"
+	media="screen" />
+</head>
+<body>
+
+
+
+
+	<div align="center">
+		<a th:href="@{/}">Home</a> | <a th:href="@{/search}">Search</a> |
+		<a th:href="@{/search-booking}"></a> |
+		<a th:href="@{/regForm}">Register</a> |
+		<a th:href="@{/loginForm}">Login</a> 
+		<a th:href="@{/checkin}">CheckIn</a> 
+		
+		  
+	</div>
+
+<hr width="50%"/>
+	<div align="center" class="form-style-8">
+		<h2>Flight Search</h2>
+		<form action="#" th:action="@{/searchResults}"
+			th:object="${searchQuery}" method="post">
+
+			<table>
+				<tr>
+					<td>Travelling from</td>
+					<td><input type="text" th:name="origin" /></td>
+				</tr>
+				<tr>
+					<td>Going to</td>
+					<td><input type="text" th:name="destination" /></td>
+				</tr>
+				<tr>
+					<td>Planning on</td>
+					<td><input type="date" th:name="flightDate"/></td>
+				</tr>
+				<tr>
+					<td>Number of Passengers</td>
+					<td><input type=number th:name="numberofPassengers"/></td>
+				</tr>
+
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Search" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><p th:text="${errorMsg}"/></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<hr width="50%"/>
+	
+</body>
+</html>

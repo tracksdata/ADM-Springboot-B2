@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>www.flybrownfield.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta charset="utf-8" />
+<link href="/css/main.css" th:href="@{/css/main.css}" rel="stylesheet"
+	media="screen" />
+</head>
+<body>
+
+
+
+
+	<div align="center">
+		<a th:href="@{/}">Home</a> | <a th:href="@{/search}">Search</a> | <a
+			th:href="@{/search-booking}">CheckIn</a> | <a th:href="@{/regForm}">Register</a>
+		| <a th:href="@{/loginForm}">Login</a>
+
+	</div>
+	<div th:with="passengers=${numberofPassengers}"></div>
+
+	<hr width="50%" />
+	<div align="center" class="form-style-8">
+		<h2>Flight Information</h2>
+
+
+
+		<table border="1">
+			<thead>
+				<tr>
+
+					<th>Flight</th>
+					<th>From</th>
+					<th>To</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Duration</th>
+					<th>Fare</th>
+					
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+
+					<td th:text="${flight.flightNumber}" />
+					<td th:text="${flight.origin}" />
+					<td th:text="${flight.destination}" />
+					<td th:text="${flight.flightDate}" />
+					<td th:text="${flight.flightTime}" />
+					<td th:text="${flight.duration}" />
+					<td th:text="${flight.fares.fare}" />
+					
+
+				</tr>
+			</tbody>
+		</table>
+
+		<hr width="50%" />
+		<h2>Booking Confirmation</h2>
+		
+		
+		<table align="center" border="1">
+		
+		<thead>
+				<tr>
+
+					<th>Passenger Name</th>
+					<th>Gender</th>
+					<th>Mobile</th>
+					<th>Email</th>
+					<th>Booking Id</th>
+
+				</tr>
+				
+			</thead>
+		<tbody>
+				<tr>
+
+					<td th:text="${passenger.firstName}" />
+					<td th:text="${passenger.gender}" />
+					<td th:text="${passenger.mobileNumber}" />
+					<td th:text="${passenger.emailAddress}" />
+					<td th:text="${passenger.bookingRecord.bookingId}" />
+					
+
+				</tr>
+			</tbody>
+			
+		
+		</table>
+		
+		
+		
+	</div>
+	
+	
+	 
+
+</body>
+</html>

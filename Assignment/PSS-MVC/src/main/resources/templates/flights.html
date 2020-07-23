@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div align="center">
+		<a th:href="@{/}">Home</a> | <a th:href="@{/search}">Search</a>
+		| <a th:href="@{/search-booking}">CheckIn</a> |
+		<a th:href="@{/regForm}">Register</a> |
+		<a th:href="@{/loginForm}">Login</a> 
+		  
+	</div>
+	
+	<hr width="50%"/>
+	
+
+	<div align="center">
+
+
+
+		<table border="1">
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Flight</th>
+					<th>From</th>
+					<th>To</th>
+					<th>Date</th>
+					<th>Time</th>
+					<th>Fare</th>
+					<th>Operation</th>
+				</tr>
+			</thead>
+
+			<tbody>
+				<tr th:each="flight,state : ${flights}">
+					<td th:text="${state.count}" />
+					<td th:text="${flight.flightNumber}" />
+					<td th:text="${flight.origin}" />
+					<td th:text="${flight.destination}" />
+					<td th:text="${flight.flightDate}" />
+					<td th:text="${flight.flightTime}" />
+
+					<td th:text="${flight.fares.fare}" />
+					<td><a
+						th:href="@{/book(id=${flight.id},numberofPassengers=${numberofPassengers})}">Book</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<hr width="50%"/>
+	</div>
+
+</body>
+</html>
